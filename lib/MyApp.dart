@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() { runApp(MyApp()); }
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -26,7 +28,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('Trivial'),
         ),
-        body: Center (
+        body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -34,12 +36,19 @@ class _MyAppState extends State<MyApp> {
                 'Puntos: $puntos', // Muestra la cantidad de puntos
                 style: TextStyle(fontSize: 24),
               ),
+              SizedBox(height: 16), // Espacio en blanco
               ElevatedButton(
                 onPressed: () {
-                  // Simula ganar puntos al presionar un botón
-                  sumarPuntos(10); // Puedes cambiar la cantidad de puntos ganados
+                  // Agrega aquí la lógica para iniciar una partida rápida
                 },
-                child: Text('Ganar puntos'),
+                child: Text('Partida Rápida'),
+              ),
+              SizedBox(height: 16), // Espacio en blanco
+              ElevatedButton(
+                onPressed: () {
+                  // Agrega aquí la lógica para elegir la categoría
+                },
+                child: Text('Elegir Categoría'),
               ),
             ],
           ),
@@ -48,4 +57,5 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
 
