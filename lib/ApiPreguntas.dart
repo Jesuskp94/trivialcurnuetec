@@ -1,5 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:trivialcurnuetec/Pregunta.dart';
 
 Future<List<Pregunta>> getPreguntas() async {
   var url = Uri.https('opentdb.com', '/api.php?amount=10&type=multiple');
