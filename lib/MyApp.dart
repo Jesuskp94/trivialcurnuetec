@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'CategoriaScreen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -23,6 +25,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Trivial newtec',
       home: Scaffold(
         appBar: AppBar(
@@ -32,13 +35,9 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                'Puntos: $puntos', // Muestra la cantidad de puntos
-                style: TextStyle(fontSize: 24),
-              ),
-              SizedBox(height: 16), // Espacio en blanco
               ElevatedButton(
                 onPressed: () {
+
                   // Agrega aquí la lógica para iniciar una partida rápida
                 },
                 child: Text('Partida Rápida'),
@@ -46,7 +45,11 @@ class _MyAppState extends State<MyApp> {
               SizedBox(height: 16), // Espacio en blanco
               ElevatedButton(
                 onPressed: () {
-                  // Agrega aquí la lógica para elegir la categoría
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CategoriaScreen())
+                  );// Agrega aquí la lógica para elegir la categoría
                 },
                 child: Text('Elegir Categoría'),
               ),
