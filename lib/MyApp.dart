@@ -45,11 +45,7 @@ class _MyAppState extends State<MyApp> {
               SizedBox(height: 16), // Espacio en blanco
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => CategoriaScreen())
-                  );// Agrega aquí la lógica para elegir la categoría
+                  // Agrega aquí la lógica para elegir la categoría
                 },
                 child: Text('Elegir Categoría'),
               ),
